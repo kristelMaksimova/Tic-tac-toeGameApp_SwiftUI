@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207C2D242A08243B00BC9A18 /* NavButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207C2D232A08243B00BC9A18 /* NavButtonView.swift */; };
+		2096AED02A081CB2004D4145 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096AECF2A081CB2004D4145 /* GameView.swift */; };
 		20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */; };
 		20C90D5E2A07EAFC003D42EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D5D2A07EAFC003D42EA /* ContentView.swift */; };
 		20C90D602A07EAFD003D42EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C90D5F2A07EAFD003D42EA /* Assets.xcassets */; };
 		20C90D632A07EAFD003D42EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C90D622A07EAFD003D42EA /* Preview Assets.xcassets */; };
 		20C90D652A07EAFD003D42EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D642A07EAFD003D42EA /* Persistence.swift */; };
 		20C90D682A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D662A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld */; };
+		20C90D6F2A07ED93003D42EA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D6E2A07ED93003D42EA /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207C2D232A08243B00BC9A18 /* NavButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonView.swift; sourceTree = "<group>"; };
+		2096AECF2A081CB2004D4145 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		20C90D582A07EAFC003D42EA /* Tic-tac-toeGameApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-tac-toeGameApp_SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_tac_toeGameApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		20C90D5D2A07EAFC003D42EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +28,7 @@
 		20C90D622A07EAFD003D42EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20C90D642A07EAFD003D42EA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		20C90D672A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tic_tac_toeGameApp_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
+		20C90D6E2A07ED93003D42EA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 			children = (
 				20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */,
 				20C90D5D2A07EAFC003D42EA /* ContentView.swift */,
+				207C2D232A08243B00BC9A18 /* NavButtonView.swift */,
+				2096AECF2A081CB2004D4145 /* GameView.swift */,
+				20C90D6E2A07ED93003D42EA /* TextFieldView.swift */,
 				20C90D5F2A07EAFD003D42EA /* Assets.xcassets */,
 				20C90D642A07EAFD003D42EA /* Persistence.swift */,
 				20C90D662A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld */,
@@ -143,10 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C90D6F2A07ED93003D42EA /* TextFieldView.swift in Sources */,
 				20C90D652A07EAFD003D42EA /* Persistence.swift in Sources */,
 				20C90D5E2A07EAFC003D42EA /* ContentView.swift in Sources */,
+				207C2D242A08243B00BC9A18 /* NavButtonView.swift in Sources */,
 				20C90D682A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld in Sources */,
 				20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */,
+				2096AED02A081CB2004D4145 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
