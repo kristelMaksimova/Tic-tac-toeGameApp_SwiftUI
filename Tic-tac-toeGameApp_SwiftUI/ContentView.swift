@@ -11,14 +11,14 @@ struct ContentView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var text1 = "Игрок 1"
-    @State private var text2 = "Игрок 2"
+    @State private var text1 = "Players 1"
+    @State private var text2 = "Players 2"
     
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
-                Text("Введите имена игроков")
+                Text("Enter player names")
                     .font(.title)
                     .foregroundColor(Color.indigo)
                     .padding()
@@ -30,7 +30,7 @@ struct ContentView: View {
                 NavigationLink(
                     destination: GameView(player1: text1, player2: text2),
                     label: {
-                        Text("Играть")
+                        Text("Play")
                             .foregroundColor(.white)
                             .font(.title2)
                             .frame(maxWidth: .infinity)
@@ -52,7 +52,7 @@ struct ContentView: View {
             .navigationBarItems(leading: Button(action: {
                 
             }, label: {
-                Text("История игр")
+                Text("Game history")
                     .font(.system(size: 21))
             })
             )
@@ -72,8 +72,3 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

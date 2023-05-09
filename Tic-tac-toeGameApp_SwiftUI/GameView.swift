@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct GameView: View {
   
-    /*
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \News.title, ascending: true)],
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Players.winner, ascending: true)],
                   animation: .default)
     
-    private var news: FetchedResults<Item>
-*/
+    private var news: FetchedResults<Players>
+
         @State private var board = Array(repeating: Array(repeating: "", count: 3), count: 3)
         
         @State var player1: String
@@ -65,6 +65,8 @@ struct GameView: View {
             .alert(item: $winner) { winner in
                 Alert(title: Text("\(winner.winner) wins!"), message: Text("Congratulations!"), dismissButton: .default(Text("Play again")) {
                     resetBoard()
+                    savePlayersToCoreData(player1: player1, player2: player2, winner: "\(winner.winner)")
+                    print(news)
                 })
             }
             .onAppear {
@@ -101,6 +103,19 @@ struct GameView: View {
             player = player1
             winner = nil
         }
+    
+    func savePlayersToCoreData(player1: String, player2: String, winner: String) {
+        let newPlayer = Players(context: viewContext)
+        newPlayer.playerOne = player1
+        newPlayer.playerTwo = player2
+        newPlayer.winner = winner
+
+        do {
+            try viewContext.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     }
 
 
