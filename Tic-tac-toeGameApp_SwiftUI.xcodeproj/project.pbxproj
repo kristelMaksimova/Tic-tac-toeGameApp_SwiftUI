@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20264F812A0A559000EC0876 /* GameHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20264F802A0A559000EC0876 /* GameHistoryView.swift */; };
 		2096AED02A081CB2004D4145 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096AECF2A081CB2004D4145 /* GameView.swift */; };
 		20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */; };
 		20C90D5E2A07EAFC003D42EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D5D2A07EAFC003D42EA /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20264F802A0A559000EC0876 /* GameHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryView.swift; sourceTree = "<group>"; };
 		2096AECF2A081CB2004D4145 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		20C90D582A07EAFC003D42EA /* Tic-tac-toeGameApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-tac-toeGameApp_SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_tac_toeGameApp_SwiftUIApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */,
 				20C90D5D2A07EAFC003D42EA /* ContentView.swift */,
+				20264F802A0A559000EC0876 /* GameHistoryView.swift */,
 				2096AECF2A081CB2004D4145 /* GameView.swift */,
 				20C90D6E2A07ED93003D42EA /* TextFieldView.swift */,
 				20C90D5F2A07EAFD003D42EA /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			files = (
 				20C90D6F2A07ED93003D42EA /* TextFieldView.swift in Sources */,
 				20C90D652A07EAFD003D42EA /* Persistence.swift in Sources */,
+				20264F812A0A559000EC0876 /* GameHistoryView.swift in Sources */,
 				20C90D5E2A07EAFC003D42EA /* ContentView.swift in Sources */,
 				20C90D682A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld in Sources */,
 				20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */,

@@ -13,6 +13,7 @@ struct ContentView: View {
     
     @State private var text1 = "Players 1"
     @State private var text2 = "Players 2"
+    @State private var isGameHistoryPresented = false
     
     var body: some View {
         NavigationStack {
@@ -46,16 +47,16 @@ struct ContentView: View {
                 Image(colorScheme == .light ? "blackRoller" : "lightRoller")
                     .resizable()
                     .frame(width: 60, height: 60)
-            })
-
-            )
+            }))
             .navigationBarItems(leading: Button(action: {
-                
+                isGameHistoryPresented = true
             }, label: {
                 Text("Game history")
                     .font(.system(size: 21))
             })
-            )
+            .sheet(isPresented: $isGameHistoryPresented) {
+                GameHistoryView()
+            })
         }
     }
     
@@ -71,4 +72,3 @@ struct ContentView: View {
         }
     }
 }
-
