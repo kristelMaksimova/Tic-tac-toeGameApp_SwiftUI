@@ -11,32 +11,33 @@ struct ContentView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var text1 = ""
-    @State private var text2 = ""
+    @State private var text1 = "Игрок 1"
+    @State private var text2 = "Игрок 2"
     
     var body: some View {
         NavigationStack {
             VStack {
-                
-                Text("Введите имена игроков")
-                    .padding()
                 Spacer()
+                Text("Введите имена игроков")
+                    .font(.title)
+                    .foregroundColor(Color.indigo)
+                    .padding()
                 
-                TextFieldView(text: text1, title: "Х", color: Color.purple)
-                    .padding(.vertical)
-                TextFieldView(text: text2, title: "0", color: Color.cyan)
+                TextFieldView(text: $text1, title: "Х", color: Color.purple)
+                TextFieldView(text: $text2, title: "0", color: Color.cyan)
+                
                 Spacer()
                 NavigationLink(
-                                   destination: GameView(),
-                                   label: {
-                                       Text("Играть")
-                                           .foregroundColor(.white)
-                                           .font(.title2)
-                                           .frame(maxWidth: .infinity)
-                                           .padding()
-                                           .background(Color.indigo)
-                                           .cornerRadius(10)
-                                   })
+                    destination: GameView(player1: text1, player2: text2),
+                    label: {
+                        Text("Играть")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.indigo)
+                            .cornerRadius(10)
+                    })
             }
             .padding()
             .navigationBarItems(trailing: Button(action: {
@@ -52,6 +53,7 @@ struct ContentView: View {
                 
             }, label: {
                 Text("История игр")
+                    .font(.system(size: 21))
             })
             )
         }
@@ -59,9 +61,13 @@ struct ContentView: View {
     
     func choiceOfColorTheme () {
         if colorScheme == .dark {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                windowScene.windows.first?.overrideUserInterfaceStyle = .light
+            }
         } else {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                windowScene.windows.first?.overrideUserInterfaceStyle = .dark
+            }
         }
     }
 }

@@ -10,28 +10,30 @@ import SwiftUI
 struct TextFieldView: View {
     
     @State private var isTextFieldActive = false
-    @State var text = ""
+    var text: Binding<String>
     @State var title = ""
     @State var color: Color
+   
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         HStack {
             Text(title)
                 .foregroundColor(color)
-                .font(.system(size: 24))
+                .font(.system(size: 30))
            
-            TextField("", text: $text, onEditingChanged: { isActive in
+            TextField("", text: text, onEditingChanged: { isActive in
                 self.isTextFieldActive = isActive
             })
             .padding()
+            .font(.system(size: 25))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(isTextFieldActive ? Color.blue : Color.gray, lineWidth: 2)
+                    .stroke(Color.indigo)
             )
-            .background(Color.white)
+            .background(colorScheme == .light ? Color.white : Color.black)
             .cornerRadius(10)
             .padding(.horizontal, 10)
         }
     }
 }
-
