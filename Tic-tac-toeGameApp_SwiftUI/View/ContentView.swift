@@ -19,44 +19,25 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 Spacer()
-                Text("Enter player names")
-                    .font(.title)
-                    .foregroundColor(Color.indigo)
-                    .padding()
+                TextInstructionView()
                 
                 TextFieldView(text: $text1, title: "Х", color: Color.purple)
                 TextFieldView(text: $text2, title: "0", color: Color.cyan)
-                
                 Spacer()
-                NavigationLink(
-                    destination: GameView(player1: text1, player2: text2),
-                    label: {
-                        Text("Play")
-                            .foregroundColor(.white)
-                            .font(.title2)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.indigo)
-                            .cornerRadius(10)
-                    })
+                ButtonPlayView(text1: text1, text2: text2)
             }
             .padding()
-            .navigationBarItems(trailing: Button(action: {
-                choiceOfColorTheme()
-            }, label: {
-                Image(colorScheme == .light ? "blackRoller" : "lightRoller")
-                    .resizable()
-                    .frame(width: 60, height: 60)
-            }))
+            .navigationBarItems(trailing: Button(action: { choiceOfColorTheme()},
+                                                 label: { ImageRollerView()}))
             .navigationBarItems(leading: Button(action: {
                 isGameHistoryPresented = true
             }, label: {
                 Text("Game history")
                     .font(.system(size: 21))
             })
-            .sheet(isPresented: $isGameHistoryPresented) {
-                GameHistoryView()
-            })
+                .sheet(isPresented: $isGameHistoryPresented) {
+                    GameHistoryView()
+                })
         }
     }
     

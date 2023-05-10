@@ -16,13 +16,9 @@ struct GameHistoryView: View {
         NavigationView {
             List {
                 ForEach(gameResults, id: \.self) { result in
-                    HStack {
-                        Text("\(result.playerOne ?? "") vs \(result.playerTwo ?? ""): ")
-                        Text(result.winner ?? "Nobody")
-                            .foregroundColor(result.winner != "Nobody" ? .green : .red)
-                    }
+                    GameHistoryTextView(playerOneName: result.playerOne ?? "", playerTwoName: result.playerTwo ?? "", playerWinName: result.winner)
                 }
-                .onDelete(perform: deleteGame) // добавляем onDelete
+                .onDelete(perform: deleteGame)
             }
             .navigationTitle("Game History")
         }
@@ -38,11 +34,5 @@ struct GameHistoryView: View {
         } catch {
             print("Error deleting game: \(error)")
         }
-    }
-}
-
-struct GameHistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameHistoryView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
