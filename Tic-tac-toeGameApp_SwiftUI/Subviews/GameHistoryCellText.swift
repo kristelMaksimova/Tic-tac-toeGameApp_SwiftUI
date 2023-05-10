@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GameHistoryTextView: View {
+struct GameHistoryCellText: View {
     
     @State var playerOneName: String
     @State var playerTwoName: String

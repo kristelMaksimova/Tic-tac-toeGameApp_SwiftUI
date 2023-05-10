@@ -13,7 +13,7 @@ struct Tic_tac_toeGameApp_SwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlayerRegistrationView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageRollerView: View {
+struct ImageRoller: View {
    
     @Environment(\.colorScheme) var colorScheme
     
@@ -20,6 +20,6 @@ struct ImageRollerView: View {
 
 struct ImageRollerView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageRollerView()
+        ImageRoller()
     }
 }

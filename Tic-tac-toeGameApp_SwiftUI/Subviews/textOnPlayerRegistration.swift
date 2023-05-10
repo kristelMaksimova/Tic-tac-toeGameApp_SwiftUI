@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextInstructionView: View {
+struct textOnPlayerRegistration: View {
     var body: some View {
         Text("Enter player names")
             .font(.title)
@@ -18,6 +18,6 @@ struct TextInstructionView: View {
 
 struct TextInstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        TextInstructionView()
+        textOnPlayerRegistration()
     }
 }

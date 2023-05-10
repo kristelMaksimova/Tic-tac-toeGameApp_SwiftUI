@@ -16,13 +16,18 @@ struct GameHistoryView: View {
         NavigationView {
             List {
                 ForEach(gameResults, id: \.self) { result in
-                    GameHistoryTextView(playerOneName: result.playerOne ?? "", playerTwoName: result.playerTwo ?? "", playerWinName: result.winner)
+                    GameHistoryCellText(playerOneName: result.playerOne ?? "", playerTwoName: result.playerTwo ?? "", playerWinName: result.winner)
                 }
                 .onDelete(perform: deleteGame)
             }
             .navigationTitle("Game History")
         }
     }
+}
+
+// MARK: - Interaction with CoreData
+
+extension GameHistoryView {
     
     func deleteGame(at offsets: IndexSet) {
         offsets.forEach { index in

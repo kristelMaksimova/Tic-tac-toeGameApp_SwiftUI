@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldView: View {
+struct NameTextField: View {
     
     @State private var isTextFieldActive = false
     var text: Binding<String>

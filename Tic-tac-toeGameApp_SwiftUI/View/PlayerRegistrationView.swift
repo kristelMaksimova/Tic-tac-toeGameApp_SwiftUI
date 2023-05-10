@@ -7,37 +7,33 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PlayerRegistrationView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var text1 = "Players 1"
-    @State private var text2 = "Players 2"
+    @State private var firstPlayerName = "Players 1"
+    @State private var secondPlayerName = "Players 2"
     @State private var isGameHistoryPresented = false
     
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
-                TextInstructionView()
+                textOnPlayerRegistration()
                 
-                TextFieldView(text: $text1, title: "Х", color: Color.purple)
-                TextFieldView(text: $text2, title: "0", color: Color.cyan)
+                NameTextField(text: $firstPlayerName, title: "Х", color: Color.purple)
+                NameTextField(text: $secondPlayerName, title: "0", color: Color.cyan)
                 Spacer()
                 NavigationLink(
-                    destination: GameView(player1: text1, player2: text2),
-                    label: { TextPlayView()
+                    destination: GameView(playerOne: firstPlayerName, playerTwo: secondPlayerName),
+                    label: { PlayButtonText()
                     })
             }
             .padding()
             .navigationBarItems(trailing: Button(action: { choiceOfColorTheme()},
-                                                 label: { ImageRollerView()}))
-            .navigationBarItems(leading: Button(action: {
-                isGameHistoryPresented = true
-            }, label: {
-                Text("Game history")
-                    .font(.system(size: 21))
-            })
+                                                 label: { ImageRoller()}))
+            .navigationBarItems(leading: Button(action: { isGameHistoryPresented.toggle()},
+                                                label: { GameHistoryText()})
                 .sheet(isPresented: $isGameHistoryPresented) {
                     GameHistoryView()
                 })

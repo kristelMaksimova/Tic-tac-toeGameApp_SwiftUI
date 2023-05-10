@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextPlayView: View {
+struct PlayButtonText: View {
     var body: some View {
         Text("Играть")
             .foregroundColor(.white)
@@ -21,6 +21,6 @@ struct TextPlayView: View {
 
 struct TextPlayView_Previews: PreviewProvider {
     static var previews: some View {
-        TextPlayView()
+        PlayButtonText()
     }
 }
