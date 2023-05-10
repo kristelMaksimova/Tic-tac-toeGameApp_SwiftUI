@@ -4,7 +4,6 @@
 //
 //  Created by Kristi on 07.05.2023.
 //
-
 import SwiftUI
 
 struct PlayerRegistrationView: View {
@@ -24,19 +23,28 @@ struct PlayerRegistrationView: View {
                 NameTextField(text: $firstPlayerName, title: "Х", color: Color.purple)
                 NameTextField(text: $secondPlayerName, title: "0", color: Color.cyan)
                 Spacer()
+                
+                // Добавляем модификатор .disabled() для кнопки NavigationLink, если хотя бы одно поле пустое
                 NavigationLink(
                     destination: GameView(playerOne: firstPlayerName, playerTwo: secondPlayerName),
-                    label: { PlayButtonText()
-                    })
+                    label: { PlayButtonText() }
+                )
+                .disabled(firstPlayerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || secondPlayerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                
             }
             .padding()
-            .navigationBarItems(trailing: Button(action: { choiceOfColorTheme()},
-                                                 label: { ImageRoller()}))
-            .navigationBarItems(leading: Button(action: { isGameHistoryPresented.toggle()},
-                                                label: { GameHistoryText()})
+            .navigationBarItems(trailing: Button(action: { choiceOfColorTheme() },
+                                                 label: { ImageRoller() }))
+            .navigationBarItems(leading: Button(action: { isGameHistoryPresented.toggle() },
+                                                label: { GameHistoryText() })
                 .sheet(isPresented: $isGameHistoryPresented) {
                     GameHistoryView()
                 })
+            .alert(isPresented: .init(get: {
+                firstPlayerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || secondPlayerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            }, set: { _ in })) {
+                Alert(title: Text("Ошибка"), message: Text("Введите имена игроков"), dismissButton: .default(Text("OK")))
+            }
         }
     }
     

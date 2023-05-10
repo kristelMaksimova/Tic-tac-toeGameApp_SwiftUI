@@ -4,7 +4,6 @@
 //
 //  Created by Kristi on 07.05.2023.
 //
-
 import SwiftUI
 
 struct NameTextField: View {
@@ -34,6 +33,13 @@ struct NameTextField: View {
             .background(colorScheme == .light ? Color.white : Color.black)
             .cornerRadius(10)
             .padding(.horizontal, 10)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+            .onChange(of: text.wrappedValue) { value in
+                if value.count > 17 {
+                    text.wrappedValue = String(value.prefix(17))
+                }
+            }
         }
     }
 }

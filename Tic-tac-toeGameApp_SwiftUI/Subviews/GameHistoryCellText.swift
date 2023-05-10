@@ -16,8 +16,10 @@ struct GameHistoryCellText: View {
     var body: some View {
         HStack {
             Text("\(playerOneName) vs \(playerTwoName): ")
+                .font(.system(size: 21))
             Text(playerWinName ?? "Nobody")
                 .foregroundColor(playerWinName != "Nobody" ? .green : .red)
+                .font(.system(size: 21))
         }
     }
 }
