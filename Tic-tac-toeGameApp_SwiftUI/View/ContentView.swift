@@ -24,7 +24,10 @@ struct ContentView: View {
                 TextFieldView(text: $text1, title: "Х", color: Color.purple)
                 TextFieldView(text: $text2, title: "0", color: Color.cyan)
                 Spacer()
-                ButtonPlayView(text1: text1, text2: text2)
+                NavigationLink(
+                    destination: GameView(player1: text1, player2: text2),
+                    label: { TextPlayView()
+                    })
             }
             .padding()
             .navigationBarItems(trailing: Button(action: { choiceOfColorTheme()},

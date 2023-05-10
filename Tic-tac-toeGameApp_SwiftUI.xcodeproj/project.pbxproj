@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		20264F812A0A559000EC0876 /* GameHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20264F802A0A559000EC0876 /* GameHistoryView.swift */; };
 		2096AED02A081CB2004D4145 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2096AECF2A081CB2004D4145 /* GameView.swift */; };
+		209765032A0C1D7D002BEB9D /* TextPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209765022A0C1D7D002BEB9D /* TextPlayView.swift */; };
 		20B5AA692A0BDADF00A42E97 /* ImageRollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5AA682A0BDADF00A42E97 /* ImageRollerView.swift */; };
-		20B5AA6B2A0BDB5400A42E97 /* ButtonPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5AA6A2A0BDB5400A42E97 /* ButtonPlayView.swift */; };
 		20B5AA6D2A0BDC4C00A42E97 /* TextInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5AA6C2A0BDC4C00A42E97 /* TextInstructionView.swift */; };
 		20B5AA702A0BDCE600A42E97 /* GameHistoryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5AA6F2A0BDCE600A42E97 /* GameHistoryTextView.swift */; };
 		20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C90D5B2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift */; };
@@ -25,8 +25,8 @@
 /* Begin PBXFileReference section */
 		20264F802A0A559000EC0876 /* GameHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryView.swift; sourceTree = "<group>"; };
 		2096AECF2A081CB2004D4145 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		209765022A0C1D7D002BEB9D /* TextPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayView.swift; sourceTree = "<group>"; };
 		20B5AA682A0BDADF00A42E97 /* ImageRollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRollerView.swift; sourceTree = "<group>"; };
-		20B5AA6A2A0BDB5400A42E97 /* ButtonPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPlayView.swift; sourceTree = "<group>"; };
 		20B5AA6C2A0BDC4C00A42E97 /* TextInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInstructionView.swift; sourceTree = "<group>"; };
 		20B5AA6F2A0BDCE600A42E97 /* GameHistoryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryTextView.swift; sourceTree = "<group>"; };
 		20C90D582A07EAFC003D42EA /* Tic-tac-toeGameApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-tac-toeGameApp_SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,8 +53,8 @@
 		20B5AA672A0BDA8F00A42E97 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				209765022A0C1D7D002BEB9D /* TextPlayView.swift */,
 				20B5AA6F2A0BDCE600A42E97 /* GameHistoryTextView.swift */,
-				20B5AA6A2A0BDB5400A42E97 /* ButtonPlayView.swift */,
 				20B5AA6C2A0BDC4C00A42E97 /* TextInstructionView.swift */,
 				20B5AA682A0BDADF00A42E97 /* ImageRollerView.swift */,
 				20C90D6E2A07ED93003D42EA /* TextFieldView.swift */,
@@ -185,11 +185,11 @@
 				20B5AA6D2A0BDC4C00A42E97 /* TextInstructionView.swift in Sources */,
 				20264F812A0A559000EC0876 /* GameHistoryView.swift in Sources */,
 				20B5AA702A0BDCE600A42E97 /* GameHistoryTextView.swift in Sources */,
-				20B5AA6B2A0BDB5400A42E97 /* ButtonPlayView.swift in Sources */,
 				20C90D5E2A07EAFC003D42EA /* ContentView.swift in Sources */,
 				20C90D682A07EAFD003D42EA /* Tic_tac_toeGameApp_SwiftUI.xcdatamodeld in Sources */,
 				20C90D5C2A07EAFC003D42EA /* Tic_tac_toeGameApp_SwiftUIApp.swift in Sources */,
 				20B5AA692A0BDADF00A42E97 /* ImageRollerView.swift in Sources */,
+				209765032A0C1D7D002BEB9D /* TextPlayView.swift in Sources */,
 				2096AED02A081CB2004D4145 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
