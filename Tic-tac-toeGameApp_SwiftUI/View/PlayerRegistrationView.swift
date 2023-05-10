@@ -10,21 +10,22 @@ struct PlayerRegistrationView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var firstPlayerName = "Players 1"
-    @State private var secondPlayerName = "Players 2"
+    @State private var firstPlayerName = "Player 1"
+    @State private var secondPlayerName = "Player 2"
     @State private var isGameHistoryPresented = false
     
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
+                
                 textOnPlayerRegistration()
                 
                 NameTextField(text: $firstPlayerName, title: "Х", color: Color.purple)
                 NameTextField(text: $secondPlayerName, title: "0", color: Color.cyan)
+                
                 Spacer()
                 
-                // Добавляем модификатор .disabled() для кнопки NavigationLink, если хотя бы одно поле пустое
                 NavigationLink(
                     destination: GameView(playerOne: firstPlayerName, playerTwo: secondPlayerName),
                     label: { PlayButtonText() }

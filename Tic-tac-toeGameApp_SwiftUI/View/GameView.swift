@@ -10,21 +10,20 @@ import CoreData
 
 struct GameView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.managedObjectContext) private var viewContext
+   
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Players.winner, ascending: true)],
                   animation: .default)
     
-    private var news: FetchedResults<Players>
+    private var players: FetchedResults<Players>
     
+    @State private var player = ""
+    @State private var winner: Winner? = nil
     @State private var board = Array(repeating: Array(repeating: "", count: 3), count: 3)
     
     @State var playerOne: String
     @State var playerTwo: String
-    
-    @State private var player = ""
-    @State private var winner: Winner? = nil
-    
-    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
@@ -62,7 +61,7 @@ struct GameView: View {
             Alert(title: Text("\(winner.winner) wins!"), message: Text("Congratulations!"), dismissButton: .default(Text("Play again")) {
                 resetBoard()
                 saveGame(playerOne: playerOne, playerTwo: playerTwo, winner: "\(winner.winner)")
-                print(news)
+                print(players)
             })
         }
         .onAppear {

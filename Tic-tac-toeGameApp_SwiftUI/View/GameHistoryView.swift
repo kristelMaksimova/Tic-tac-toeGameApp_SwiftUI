@@ -9,7 +9,9 @@ import SwiftUI
 import CoreData
 
 struct GameHistoryView: View {
+  
     @Environment(\.managedObjectContext) private var viewContext
+    
     @FetchRequest(entity: Players.entity(), sortDescriptors: []) var gameResults: FetchedResults<Players>
 
     var body: some View {
